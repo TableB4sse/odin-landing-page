@@ -6,42 +6,43 @@
 body {
 		font-family: Roboto, sans-serif;
 		margin: 0;
-		border: 1px solid red;
+
+		min-height: 965px;
+		display: flex;
+		flex-direction: column;
 
 }
 
-.top-container {
-		max-width: 1400px;
-		margin: 0 auto;
-		border: 1px solid blue;
-}
-
-header {
+header, footer {
 		background-color: #1f2937;
 		color: #f9faf8;
 		font-size: 48px;
 		font-weight: 900;
+		text-align: center;
 }
 
-.quote-section {
-		background-color: #e5e7eb;
-		color: #1f2937;
-		font-size: 36px;
-		font-weight: 300;
-
+h1 {
+		text-align: center;
 }
 
-.quote-author {
-		background-color: #e5e7eb;
-		color: #1f2937;
-		font-size: 16px;
-		font-weight: 700;
+main {
+		flex: 1; /* Allows main to share the body height with .quote-section equally */
+}
+main, .quote-section {
+		display:flex;
+		justify-content: center;
+  		align-items: center;
 }
 
 .gallery {
+		width: 100%;
 		display: flex;
-}
+		justify-content: space-around;
 
+}
+.gallery figure {
+		width: 320px;
+}
 .gallery img {
 		width: 320px;
 		height: 220px;
@@ -51,3 +52,34 @@ header {
 		border: 4px solid #3882f6;
 		border-radius: 18px;
 }
+.gallery figcaption {
+		color: #555555;
+		max-width: 100%;
+		text-align: center;
+		word-break: break-word;
+}
+
+.quote-section {
+		background-color: #e5e7eb;
+		width: 100%;
+		color: #1f2937;
+		font-size: 36px;
+		font-weight: 300;
+		flex: 1; /* Allows .quote-section to share the height with main equally */
+}
+.quote-section .quote {
+		width: 43%;
+		margin: 0 auto;
+		font-style: italic;
+		text-align: justify;
+		word-break: break-word;
+}
+.quote-author {
+		background-color: #e5e7eb;
+		color: #1f2937;
+		font-size: 26px;
+		font-weight: 700;
+		text-align: right;
+}
+
+
