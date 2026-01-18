@@ -70,7 +70,6 @@ main, .quote-section {
 .quote-section .quote {
 		width: 43%;
 		margin: 0 auto;
-		font-style: italic;
 		text-align: justify;
 		word-break: break-word;
 }
