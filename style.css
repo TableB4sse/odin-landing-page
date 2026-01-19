@@ -3,35 +3,138 @@
     padding: 0;
 }
 
+
 body {
 		font-family: Roboto, sans-serif;
-		margin: 0;
-
 		min-height: 965px;
+		background-color: #111827;
+}
+
+body, main, .info, .quote-section {
 		display: flex;
 		flex-direction: column;
-
+		align-items: center;
 }
 
 header, footer {
 		background-color: #1f2937;
 		color: #f9faf8;
-		font-size: 48px;
-		font-weight: 900;
-		text-align: center;
+		width: 60%;
+}
+header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 7rem;
 }
 
-h1 {
-		text-align: center;
+.logo {
+		height: 70px;
+		width: auto;
+		display: block;
+		margin-left: 7rem;
+}
+
+nav {
+		width: 30%;
+		display: flex;
+		justify-content: space-between;
+		margin-right: 8rem;
+
+}
+nav a {
+		font-size: 1.2rem;
+		color: #e5e7eb;
+		text-decoration: none;
+		letter-spacing: 0.5px;
+		position: relative;
+}
+
+nav a:after {
+		content: "";
+		position: absolute;
+		background-color: #fff;
+		height: 3px;
+		width: 0;
+		left: 0;
+		bottom: -10px;
+		transition: 0.3s;
+}
+
+nav a:hover:after {
+		width: 100%;
+
 }
 
 main {
-		flex: 1; /* Allows main to share the body height with .quote-section equally */
+		background-color: #fff;
+		width: 60%;
+		flex:1;
+		align-items: center;
 }
-main, .quote-section {
-		display:flex;
+
+.hero {
+		background-color: #1f2937;
+		color: #f9faf8;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		min-height: 20rem;
+}
+
+.hero-left {
+		width: 30%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+}
+.hero-left h1 {
+		font-size: 48px;
+		font-weight: 900;
+
+}
+.hero-left p {
+		font-size: 15px;
+		text-align: justify;
+		word-break: break-word;
+		color: #e5e7eb;
+		margin-bottom: 8px;
+
+}
+.hero-left a, .cta-container a {
+		text-decoration: none;
+		text-align: center;
+		letter-spacing: 0.5px;
+		color: #f9faf8;
+		background-color: #3882f6;
+		width: 6rem;
+		border-radius: 5px;
+		min-height: 30px;
+		line-height: 30px
+}
+.hero-left a:hover, .cta-container a:hover {
+		background-color: #2563eb;
+}
+.hero-right {
+		width: 40%;
+}
+
+.hero-right img {
+		width: 100%;
+		max-height: 15rem;
+		object-fit: fill;
+
+}
+
+.info {
+		width: 100%;
 		justify-content: center;
-  		align-items: center;
+		min-height: 25rem;
+}
+.info h1 {
+		text-align: center;
+		margin-bottom: 2rem;
 }
 
 .gallery {
@@ -41,12 +144,13 @@ main, .quote-section {
 
 }
 .gallery figure {
-		width: 320px;
+		width: 20%;
 }
+
 .gallery img {
-		width: 320px;
+		width: 100%;
 		height: 220px;
-		object-fit: cover;
+		object-fit: fill;
 		display:block;
 
 		border: 4px solid #3882f6;
@@ -62,9 +166,10 @@ main, .quote-section {
 .quote-section {
 		background-color: #e5e7eb;
 		width: 100%;
+		min-height: 20rem;
 		color: #1f2937;
-		flex: 1; /* Allows .quote-section to share the height with main equally */
-		font-size: 36px;
+		justify-content: center;
+		font-size: 26px;
 		font-weight: 300;
 
 }
@@ -83,4 +188,34 @@ main, .quote-section {
 		text-align: right;
 }
 
+.cta {
+		min-height: 20rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+}
 
+.cta-container {
+		display: flex;
+		min-width: 55rem;
+		min-height: 8rem;
+		background-color: #3882f6;
+		border-radius: 9px;
+		color: #f9faf8;
+		justify-content: space-around;
+		align-items: center;
+
+}
+.cta-container-left p {
+		font-size: 13px;
+}
+.cta-container a {
+		border: 2px solid #f9faf8;
+		background-color: #3882f6;
+}
+
+footer {
+		text-align: center;
+		min-height: 5rem;
+		line-height: 5rem;
+}
